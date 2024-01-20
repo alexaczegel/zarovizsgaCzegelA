@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Unit teszt feladat</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="testBase.js"></script>
+</head>
+<body>
+    <!-- Ide jön  a feladat megoldása... -->
+	
+	<!--Oszinten szolva nehol nem tudtam ertelmezni a feladatot, ugye az elso teszt piros, nem fogadta el a container elemet a section node-ban,
+    probalkoztam hogy div-ben irom, de ugy se adta meg.
+    
+    A kovetkezo piros teszt pedig hogy ezt a 6-os nagysagut 2 side elemmel egeszitsem ki, probalgattam itt adni meg row-okat, stb. es probaltam a 
+    teszt szovegebol kibogozni mit szeretne a script de nem tudtam ertelmezni ezt:
+
+        "A teszt ("A konténer mellett létezik még két konténer ami középre pozícionálja a konténert") sikertelen!""
+    
+    Szóval kicsit össze zavarodtam nehol.
+
+    Sajnos a 'A form elemen belül hozzon létre 3 input szekciót' is csak akkor irta ki zölddel ha az elso div szekciot Section tag-be teszem,
+    de akkor az összes többi dolgot ki pirosozza szóval ebben sem vagyok biztos.
+    -->
+
+    <section class="container col-lg-6"> 
+
+        <form action="feldolgoz.php" method="POST">
+
+
+            <!-- <section>  ebben sajnos nem vagyok biztos, hogy most section tagre gondoltak vagy hogy külön legyenek valamiben pl div-ben.
+                
+            ha ezt az elsot bele teszem az egeszet egy section-ba csak akkor lesz zold a teszt, de akkor a többit viszont pirosnak irja, igy
+            nem tudom ellenorizni hogy mit csinalok jól és rosszul ! :(
+                
+            Igazabol ahogy irtam tobb mindent, neha elfogadja, neha nem !-->
+
+                <div class="form-group">
+
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+             <!-- </section> -->   
+
+                <div class="form-group">
+
+                    <label for="name">Név:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+
+                    <label for="text_message">Rendelés szövege:</label>
+                    <textarea class="form-control" id="text_message" name="text_message" rows="4" required></textarea>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary" value="ok" name="ok">Submit</button>
+
+
+        </form>
+
+
+    </section>
+	
+	
+	
+	<!-- Idáig -->
+	<hr>
+<div id="testResult">
+<h2>Tesztek</h2></div>
+<script src="bootstrap_test.js"></script>
+</body>
+</html>

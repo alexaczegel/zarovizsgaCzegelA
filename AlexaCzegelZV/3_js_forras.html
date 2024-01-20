@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+	<!-- Ide jön  a feladat megoldása... -->
+	
+	
+function kivalogatParosOtven(array) {
+  var eredmeny = [];
+
+  for (var i = 0; i < array.length; i++) {
+    var elem = array[i];
+
+    if (elem % 2 === 0 && elem > 50) {
+      eredmeny.push(elem);
+    }
+  }
+
+  return eredmeny;
+}
+
+ 
+
+
+function aBetukSzamaDiv() {
+
+  var elsoDiv = document.getElementsByTagName('div')[0];
+
+
+  var divTartalom = elsoDiv.textContent;
+
+
+  var aBetukSzama = 0;
+
+  for (var i = 0; i < divTartalom.length; i++) {
+
+    if (divTartalom[i] === 'a' || divTartalom[i] === 'A') {
+
+      aBetukSzama++;
+    }
+  }
+  return aBetukSzama;
+}
+
+function osszeadasFeliras(osztaly, operandus1, operandus2) {
+    var elemek = document.getElementsByClassName(osztaly);
+
+    if (elemek.length > 0) {
+
+        var szam1 = Number(operandus1);
+        var szam2 = Number(operandus2);
+        var eredmeny = szam1 + szam2;
+
+        var elsoElem = elemek[0];
+
+
+        var ujParagraf = document.createElement('p');
+        ujParagraf.textContent = `${szam1} + ${szam2} = ${eredmeny}`;
+
+
+        elsoElem.appendChild(ujParagraf);
+    }
+}
+	<!-- Idáig -->
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+<body>
+    <div></div>
+	<hr>
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+</body>
+</html>
